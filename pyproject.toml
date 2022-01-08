@@ -4,7 +4,7 @@ source = "src/backend"
 [tool.isort]
 profile = "black"
 line_length = 50
-known_first_party = "backend"
+known_first_party = ["backend"]
 multi_line_output = 3
 include_trailing_comma = true
 force_alphabetical_sort_within_sections = true
