@@ -734,7 +734,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "209431018a323aff6b8cad953c89a4b59dc4ff38bc930413537d4028f3c2841a"
+content-hash = "9d8fc62323dc5639e14b5606e068f6c3790022ab630359255259524cc4eb19e1"
 
 [metadata.files]
 anyio = [
