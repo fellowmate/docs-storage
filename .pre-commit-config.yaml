@@ -13,6 +13,27 @@ repos:
       - id: check-added-large-files
         args: ["--maxkb=500"]
 
+  - repo: https://github.com/myint/eradicate
+    rev: v2.0.0
+    hooks:
+      - id: eradicate
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.31.0
+    hooks:
+      - id: pyupgrade
+        args: ["--py310-plus"]
+
+  - repo: https://github.com/psf/black
+    rev: 21.12b0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.1
+    hooks:
+      - id: prettier
+
   - repo: https://github.com/asottile/yesqa
     rev: v1.3.0
     hooks:
@@ -23,9 +44,14 @@ repos:
     hooks:
       - id: absolufy-imports
 
-  # Don't work now because of https://github.com/FHPythonUtils/LicenseCheck/issues/17
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        name: isort (python)
+
   # - repo: https://github.com/FHPythonUtils/LicenseCheck
-  #   rev: '2021.5'
+  #   rev: "2021.5.2"
   #   hooks:
   #     - id: licensecheck
 
@@ -33,7 +59,8 @@ repos:
     rev: 1.7.1
     hooks:
       - id: bandit
-        args: ["--recursive", "--exclude=tests,.venv"]
+        args: ["--recursive", "-c", "pyproject.toml"]
+        additional_dependencies: [toml]
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
     rev: v1.2.2
@@ -45,16 +72,8 @@ repos:
     rev: 3.9.2
     hooks:
       - id: flake8
-        additional_dependencies: [
-            pep8-naming,
-            flake8-blind-except,
-            flake8-bugbear,
-            flake8-builtins,
-            flake8-comprehensions,
-            flake8-print,
-            flake8-2020,
-            flake8-requirements,
-          ]
+        additional_dependencies:
+          [pep8-naming, flake8-blind-except, flake8-bugbear, flake8-builtins, flake8-comprehensions, flake8-print, flake8-2020]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.931

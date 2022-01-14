@@ -1,21 +1,22 @@
 {
-    "configurations": [
-        {
-            "name": "Run FastAPI",
-            "type": "python",
-            "python": "${command:python.interpreterPath}",
-            "request": "launch",
-            "module": "uvicorn",
-            "cwd": "${workspaceFolder}",
-            "args": ["auth.main:app"]
-        }, {
-            "name": "Run tests",
-            "type": "python",
-            "python": "${command:python.interpreterPath}",
-            "request": "launch",
-            "module": "pytest",
-            "cwd": "${workspaceFolder}",
-            "args": ["${config:python.testing.pytestArgs}"],
-        },
-    ]
+  "configurations": [
+    {
+      "name": "Run FastAPI",
+      "type": "python",
+      "python": "${command:python.interpreterPath}",
+      "request": "launch",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}",
+      "args": ["backend.create_app:create_app", "--factory", "--app-dir", "src", "--port", "8081", "--reload"]
+    },
+    {
+      "name": "Run tests",
+      "type": "python",
+      "python": "${command:python.interpreterPath}",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "args": ["${config:python.testing.pytestArgs}"]
+    }
+  ]
 }
