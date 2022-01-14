@@ -91,7 +91,6 @@ pytest-lazy-fixture = "^0.6.3"
 pytest-nice-parametrize = "^1.0.1"
 pytest-asyncio = "^0.16.0"
 pytest-pythonpath = "^0.7.3"
-licensecheck = "^2021.5.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
