@@ -25,7 +25,7 @@ Use .env file in root directory for set env variables to project. Env vars are s
 For local development you can use uvicorn
 
 ```sh
-uvicorn backend.create_app:create_app --factory --app-dir src --port 8081 --reload
+poetry run dotenv uvicorn backend.create_app:create_app --factory --app-dir src --port 8081 --reload
 ```
 
 Or, if you have VSCode, use "Run FastAPI" in "Run and Debug" section.
@@ -33,7 +33,7 @@ Or, if you have VSCode, use "Run FastAPI" in "Run and Debug" section.
 For more uvicorn options use:
 
 ```sh
-uvicorn --help
+poetry run uvicorn --help
 ```
 
 ### Docker compose

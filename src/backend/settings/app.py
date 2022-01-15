@@ -19,11 +19,12 @@ class Settings(BaseSettings):
 
     https: bool = False
 
-    secret_token: str = "GYctzupHZkyhhzGzcOXEGLfvIHmvStWuSqkqijmMTVUNIROohBTIHczEUwKRPCgo"  # /* cspell: disable-line */
+    secret_token: str
     cookie_secure: t.Optional[bool] = None
 
     @validator("cookie_secure", always=True)
-    def validate_cookie_secure(self, _, values: dict[str, t.Any]) -> bool:
+    @classmethod
+    def validate_cookie_secure(cls, _, values: dict[str, t.Any]) -> bool:
         if values["https"] is True:
             return True
         return False
@@ -36,4 +37,4 @@ class Settings(BaseSettings):
 
 @lru_cache
 def get_settings() -> Settings:
-    return Settings()
+    return Settings()  # pyright: reportGeneralTypeIssues=false

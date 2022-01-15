@@ -157,6 +157,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "dotenv-cli"
+version = "2.2.0"
+description = "Simple dotenv CLI."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+dev = ["flake8", "pytest", "pytest-cov", "twine", "wheel"]
+
+[[package]]
 name = "fastapi"
 version = "0.71.0"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
@@ -734,7 +745,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "9d8fc62323dc5639e14b5606e068f6c3790022ab630359255259524cc4eb19e1"
+content-hash = "03691ea55fec43a53b1016cc7a6c3f532916b48f1d9a71fb45f9ddc2b5552921"
 
 [metadata.files]
 anyio = [
@@ -833,6 +844,10 @@ coverage = [
 distlib = [
     {file = "distlib-0.3.4-py2.py3-none-any.whl", hash = "sha256:6564fe0a8f51e734df6333d08b8b94d4ea8ee6b99b5ed50613f731fd4089f34b"},
     {file = "distlib-0.3.4.zip", hash = "sha256:e4b58818180336dc9c529bfb9a0b58728ffc09ad92027a3f30b7cd91e3458579"},
+]
+dotenv-cli = [
+    {file = "dotenv-cli-2.2.0.tar.gz", hash = "sha256:c2e9c058ce5b522aebfd3ccddf19f33b209b696943efc57ccc59cd3dd1d8c3d8"},
+    {file = "dotenv_cli-2.2.0-py3-none-any.whl", hash = "sha256:3aef527284385717132f710a21c5517e14251bdd27cc13b57c87629de0472151"},
 ]
 fastapi = [
     {file = "fastapi-0.71.0-py3-none-any.whl", hash = "sha256:a78eca6b084de9667f2d5f37e2ae297270e5a119cd01c2f04815795da92fc87f"},
