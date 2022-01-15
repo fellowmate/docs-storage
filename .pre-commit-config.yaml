@@ -50,10 +50,10 @@ repos:
       - id: isort
         name: isort (python)
 
-  # - repo: https://github.com/FHPythonUtils/LicenseCheck
-  #   rev: "2021.5.2"
-  #   hooks:
-  #     - id: licensecheck
+  - repo: https://github.com/FHPythonUtils/LicenseCheck
+    rev: "2022"
+    hooks:
+      - id: licensecheck
 
   - repo: https://github.com/PyCQA/bandit
     rev: 1.7.1
