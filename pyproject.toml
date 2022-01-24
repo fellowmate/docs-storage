@@ -48,7 +48,7 @@ using = "poetry"
 format = "simple"
 
 [tool.poetry]
-name = "auth backend"
+name = "docs storage"
 version = "0.1.0"
 description = ""
 authors = ["Niccolum <lastsal@mail.ru>"]
